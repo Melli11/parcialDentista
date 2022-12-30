@@ -100,7 +100,8 @@ lePuedeInteresarElCupon(Usuario,cupon(Marca,Producto,Descuento)):-
 
 /* punto 5 */
 
-nadieLeDioBola(Usuario):-	
+nadieLeDioBola(Usuario):-
+    accionDeUsuario(Usuario,_),
 	not((accionDeUsuario(Usuario,recomiendaCupon(Marca,Fecha,Recomendado)),accionDeUsuario(Recomendado,compraCupon(_,Fecha,Marca)))).
 
 /* punto 6 */
